@@ -108,6 +108,7 @@
         <ul class="nav nav-list bs-docs-sidenav">
           <li><a href="#font-awesome"><i class="icon-chevron-right"></i>Font Awesome Icons</a></li>
           <li><a href="#icon-hover"><i class="icon-chevron-right"></i>Icon Animations</a></li>
+          <li><a href="#cookie"><i class="icon-chevron-right"></i>EU Law Cookie Policy</a></li>
         </ul>
       </div>
       <div class="span9">        
@@ -1013,7 +1014,7 @@
           <div class="bs-docs-example">
             <div class="btn-group">
               <a href="#" class="btn btn-primary"><i class="icon-user icon-white"></i> User</a>
-              <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+              <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><i class="icon-angle-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
                 <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
@@ -1146,6 +1147,30 @@
         </section>
 
 
+        <!-- Cookie Policy
+        ================================================== -->
+        
+      <section id="cookie">
+          <div class="page-header">
+            <h1>Cookie Script</h1>
+          </div>
+<p class="lead">Abide to EU law with this simple cookie policy script</p>
+
+          <h2>Installation</h2>
+
+<p>The cookie policy script is embedded into Boostraps ordinary <code>bootstrap.js</code> file so there is no need for another messy script include. All you need to do is paste the script below on your chosen page:</p>
+
+<pre class="prettyprint linenums">
+<code>&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$.cookieBar({  });
+});
+&lt;/script&gt;</code></pre>
+
+
+       </section>   
+
+
 
         <!-- Next
         ================================================== -->
@@ -1153,6 +1178,7 @@
           <div class="page-header">
             <h1>What next?</h1>
           </div>
+      element: 'body', //Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
           <p class="lead">Head to the docs for information, examples, and code snippets, or take the next leap and customize Bootstrap for any upcoming project.</p>
           <a class="btn btn-large btn-primary" href="./scaffolding.html" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Bootstrap docs</a>
           <a class="btn btn-large" href="./customize.html" style="margin-left: 5px;" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Customize']);">Customize Bootstrap</a>
@@ -1172,7 +1198,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Built by <a href="http://twitter.com/lewishealey">@lewishealey</a> , Bootstrap utilizes CSS (LESS coming soon) and is managed through <a href="http://github.com">GitHub</a> to help people improve their designs. For premium themes feel free to visit <a href="http://codecanyon.net/category/skins/bootstrap">codecanyon</a></p>
         <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
@@ -1205,28 +1231,37 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/bootstrap-cookiebar.js"></script>
 
     <script src="assets/js/holder/holder.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
 
     <script src="assets/js/application.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+$.cookieBar({  });
+});
+</script>
+
 
     <!-- Analytics
     ================================================== -->
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42785173-1', 'lewishealey.co.uk');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+$.cookie('the_cookie', 'the_value');
+
+</script>
 
   </body>
 </html>

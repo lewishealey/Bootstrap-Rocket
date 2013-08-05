@@ -12,18 +12,14 @@
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-
-     <!-- Font Awesome-->
+    
+    <!-- Font Awesome-->
     <link href="assets/css/font.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Animations-->
-    <link rel="stylesheet" href="assets/css/icon-hover.css">
-    <!-- This file is required for slide and flip effects only -->
-    <link rel="stylesheet" href="assets/css/icon-hover-icons.css">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
+      <link href="assets/css/font-awesome-ie7.min.css" rel="stylesheet">
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
@@ -65,7 +61,7 @@
                 <a href="./index.html">Home</a>
               </li>
               <li class="">
-                <a href="./getting-started.html">Get Started</a>
+                <a href="./getting-started.html">Get started</a>
               </li>
               <li class="">
                 <a href="./added-extras.html">Added Extras</a>
@@ -82,11 +78,16 @@
               <li class="">
                 <a href="./javascript.html">JavaScript</a>
               </li>
+              <li class="">
+                <a href="./customize.html">
+                <i class="icon-cog"></i> Customize</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
 
 <!-- Subhead
 ================================================== -->
@@ -596,51 +597,6 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
   …
 &lt;/table&gt;
 </pre>
-
-          <h3><code>.table-bordered</code></h3>
-          <p>Add borders and rounded corners to the table.</p>
-          <div class="bs-docs-example">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="2">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@TwBootstrap</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-<pre class="prettyprint linenums">
-&lt;table class="table table-bordered"&gt;
-  …
-&lt;/table&gt;
-</pre>
-
           <h3><code>.table-hover</code></h3>
           <p>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
           <div class="bs-docs-example">
@@ -1712,7 +1668,7 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
               <tr>
                 <td><button type="button" class="btn">Default</button></td>
                 <td><code>btn</code></td>
-                <td>Standard gray button with gradient</td>
+                <td>Standard gray button</td>
               </tr>
               <tr>
                 <td><button type="button" class="btn btn-primary">Primary</button></td>
@@ -1751,54 +1707,99 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
               </tr>
             </tbody>
           </table>
-
-          <h4>Cross browser compatibility</h4>
-          <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
-
+          
+          <h2>Bordered buttons</h2>
+          <p>Button styles can be applied to anything with the <code>.btn-border</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>class=""</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn-border">Default</button></td>
+                <td><code>btn-border</code></td>
+                <td>Standard gray border button</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-primary">Primary</button></td>
+                <td><code>btn-border btn-border-primary</code></td>
+                <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-info">Info</button></td>
+                <td><code>btn-border btn-border-info</code></td>
+                <td>Used as an alternative to the default styles</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-success">Success</button></td>
+                <td><code>btn-border btn-border-success</code></td>
+                <td>Indicates a successful or positive action</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-warning">Warning</button></td>
+                <td><code>btn-border btn-border-warning</code></td>
+                <td>Indicates caution should be taken with this action</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-danger">Danger</button></td>
+                <td><code>btn-border btn-danger</code></td>
+                <td>Indicates a dangerous or potentially negative action</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn-border btn-border-inverse">Inverse</button></td>
+                <td><code>btn-border btn-border-inverse</code></td>
+                <td>Alternate dark gray button, not tied to a semantic action or use</td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2>Button sizes</h2>
           <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
           <div class="bs-docs-example">
             <p>
               <button type="button" class="btn btn-large btn-primary">Large button</button>
-              <button type="button" class="btn btn-large">Large button</button>
+              <button type="button" class="btn-border btn-large btn-border-primary">Large button</button>
             </p>
             <p>
               <button type="button" class="btn btn-primary">Default button</button>
-              <button type="button" class="btn">Default button</button>
+              <button type="button" class="btn-border btn-border-primary">Default button</button>
             </p>
             <p>
               <button type="button" class="btn btn-small btn-primary">Small button</button>
-              <button type="button" class="btn btn-small">Small button</button>
+              <button type="button" class="btn-border btn-small btn-border-primary">Small button</button>
             </p>
             <p>
               <button type="button" class="btn btn-mini btn-primary">Mini button</button>
-              <button type="button" class="btn btn-mini">Mini button</button>
+              <button type="button" class="btn-border btn-mini btn-border-primary">Mini button</button>
             </p>
           </div>
 <pre class="prettyprint linenums">
 &lt;p&gt;
   &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
-  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn-border btn-large btn-border-primary" type="button"&gt;Large button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
-  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn-border btn-border-primary" type="button"&gt;Default button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
-  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn-border btn-small btn-border-primary" type="button"&gt;Small button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
-  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn-border btn-mini btn-border-primary" type="button"&gt;Mini button&lt;/button&gt;
 &lt;/p&gt;
 </pre>
           <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
           <div class="bs-docs-example">
             <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
               <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
-              <button type="button" class="btn btn-large btn-block">Block level button</button>
+              <button type="button" class="btn-border btn-border-primary btn-large btn-block">Block level button</button>
             </div>
           </div>
 <pre class="prettyprint linenums">
@@ -1880,13 +1881,10 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
 
         </section>
 
-
       </div>
     </div>
 
   </div>
-
-
 
     <!-- Footer
     ================================================== -->
@@ -1898,9 +1896,9 @@ For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped 
         <ul class="footer-links">
           <li><a href="http://blog.getbootstrap.com">Blog</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twbs/bootstrap/releases">Changelog</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
         </ul>
       </div>
     </footer>

@@ -241,8 +241,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #005580;
-  text-decoration: underline;
+  color: #ccc;
 }
 
 .img-rounded {
@@ -5033,3 +5032,7 @@ margin-right: 5px;
 color: #555;
 }
 
+.cookie-bar {background:#121212; height:24px; line-height:24px; color:#eeeeee; text-align:center; padding:10px 0; position: absolute; bottom: 0; width: 100%; position: fixed; z-index: 9999;}
+.cookie-bar.fixed {position:fixed; bottom:0; left:0; width:100%;}
+.cookie-bar p {margin:0; padding:0;}
+.cookie-bar a {color:#ffffff; display:inline-block; text-decoration:none; padding:0 10px; margin-left:8px;}
