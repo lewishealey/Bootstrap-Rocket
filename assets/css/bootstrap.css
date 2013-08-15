@@ -2157,6 +2157,34 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 
+.btn-sep-top { 
+margin-top: 40px;
+position: relative;
+}
+
+.btn-sep-top:after {
+content:" ";
+border-bottom: 1px dotted #5a5a5a;
+top: -30px;
+width: 50%;
+position: absolute;
+left: 25%;
+}
+
+.btn-sep-btm { 
+margin-bottom: 40px;
+position: relative;
+}
+
+.btn-sep-btm:after {
+content:" ";
+border-bottom: 1px dotted #5a5a5a;
+bottom: -30px;
+width: 50%;
+position: absolute;
+left: 25%;
+}
+
 .dropup,
 .dropdown {
   position: relative;
